@@ -182,7 +182,7 @@ section h2 {
   margin: 0;
   font-size: 3em;
 }
-section.danger {
+section.youtube {
   background: url(../img/youtube.png) no-repeat center center scroll;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -190,7 +190,7 @@ section.danger {
   -o-background-size: cover;
 
 }
-section.danger h1 {
+section.youtube h1 {
   color: white;
   font-family: 'Baloo Thambi', cursive;
   font-size: 350%;
@@ -200,6 +200,14 @@ section.danger h1 {
 section.success {
   background: #0e0e0c;
   color: white;
+}
+
+section.contact-form {
+  background: url(../img/city.jpg) no-repeat center center scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
 }
 
 @media (max-width: 767px) {
