@@ -24,20 +24,6 @@
 
 <body class="text-center">
   <script src="https://apis.google.com/js/platform.js"></script>
-  <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-
-  <script>
-  function onYtEvent(payload) {
-    if (payload.eventType == 'subscribe') {
-      $("#submit").toggleClass('disabled active')
-    } else if (payload.eventType == 'unsubscribe') {
-      $("#submit").toggleClass('disabled')
-    }
-    if (window.console) { // for debugging only
-      window.console.log('YT event: ', payload);
-    }
-  }
-</script>
 
   <h1> GIVEAWAY!!! </h1>
   <h5> 1. Please suscribe to my YouTube channel! Thanks for the support! </h5>
@@ -57,6 +43,23 @@
     <hr class="small">
     <button id="submit" type="button" class="btn btn-primary disabled">Send</button>
   </form>
+
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+
+  <script>
+  function onYtEvent(payload) {
+    if (payload.eventType == 'subscribe') {
+      $("#submit").click(function() {
+        $( this ).toggleClass(disabled, active);
+      });
+    } else if (payload.eventType == 'unsubscribe') {
+      $("#submit").toggleClass('disabled')
+    }
+    if (window.console) { // for debugging only
+      window.console.log('YT event: ', payload);
+    }
+  }
+</script>
 
 </body>
 </html>
